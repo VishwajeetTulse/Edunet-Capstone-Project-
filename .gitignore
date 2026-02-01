@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+build/
+.vercel/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+.env*.local
+
+# Datasets and Models (Large files - DO NOT COMMIT)
+*.h5
+*.pth
+*.onnx
+*.parquet
+model/edunet-project-dataset/
+model/catboost_info/
+model/learn/
+model/tmp/
+*.csv
+!model/data_dictionary.csv  # Keep dictionary if it exists and is small, otherwise ignore all csv
+
+# Notebook outputs (optional, but good for cleanliness)
+.ipynb_checkpoints/
+
+# System
+.DS_Store
+Thumbs.db
+*.log
