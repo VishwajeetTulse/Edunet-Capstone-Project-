@@ -58,8 +58,7 @@ CAT_COLS = [
 SII_MAPPING = {
     0: {"level": "None", "desc": "No significant indication of problematic internet use."},
     1: {"level": "Mild", "desc": "Mild signs of internet overuse. Monitor screen time."},
-    2: {"level": "Moderate", "desc": "Moderate problematic use detected. Lifestyle changes recommended."},
-    3: {"level": "Severe", "desc": "Severe problematic internet use. Professional consultation advised."}
+    2: {"level": "High Risk", "desc": "Significant problematic use detected. Immediate attention recommended."}
 }
 
 # Defaults for missing critical values (Approximated based on healthy averages)
@@ -109,8 +108,7 @@ def feature_engineering(df):
 
 def threshold_Rounder(oof_non_rounded, thresholds):
     return np.where(oof_non_rounded < thresholds[0], 0,
-                    np.where(oof_non_rounded < thresholds[1], 1,
-                             np.where(oof_non_rounded < thresholds[2], 2, 3)))
+                    np.where(oof_non_rounded < thresholds[1], 1, 2))
 
 class PredictionRequest(BaseModel):
     features: Dict[str, Any]

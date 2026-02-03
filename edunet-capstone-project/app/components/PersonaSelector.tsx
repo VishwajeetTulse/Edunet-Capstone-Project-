@@ -20,7 +20,7 @@ const PERSONAS: Persona[] = [
     data: {
       age: 16,
       sex: 1, // Male
-      hours: 14, // Extreme
+      hours: 10, // Extreme
       height: 175,
       weight: 80,
       hr: 85,
@@ -39,14 +39,14 @@ const PERSONAS: Persona[] = [
     color: 'bg-blue-100 text-blue-600',
     data: {
       age: 15,
-      sex: 0, // Female
+      sex: 1, // Male
       hours: 6,
       height: 160,
       weight: 55,
       hr: 75,
       systolic: 115,
       diastolic: 75,
-      sds: 45, // Average sleep
+      sds: 30, // Good sleep
       paq: 2.5, // Average activity
       cgas: 75, // Good functioning
     }
@@ -59,7 +59,7 @@ const PERSONAS: Persona[] = [
     color: 'bg-emerald-100 text-emerald-600',
     data: {
       age: 17,
-      sex: 1,
+      sex: 1, // Male
       hours: 2,
       height: 180,
       weight: 75,
